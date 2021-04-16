@@ -1,0 +1,266 @@
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Jost";
+    background-color: #F0F9FF;
+}
+
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+/*Styling header*/
+.navbar{
+    margin-top:30px;
+}
+.logo{
+    width:150px;
+}
+
+.logo_image{
+    width:100%;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu__link{
+    text-decoration:none;
+    margin-left:25px;
+    font-family: "Jost-Medium";
+    color: #160B38;
+}
+
+.nav__icon{
+    font-size:30px;
+    color:#212022;
+    display: none!important;
+    cursor:pointer;
+}
+
+.link_menu_active a{
+    font-family: "Jost-Medium";
+    background-color: #3B1C99;
+    color: #fff;    padding:7px 20px;
+    box-sizing: border-box;
+    border-radius:13px 13px 0px 13px;
+    font-size:16px;
+    padding:15px;
+}
+/*Styling main content*/
+.main-row {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top:60px;
+}
+
+.display-eror {
+    width:50%;
+}
+
+.title-eror{
+    font-size:70px;
+    margin-bottom:30px;
+    color :#160B38;
+    position: relative;
+}
+
+.title-eror ::before {
+    content:"";
+    background: url("/images/Lines.svg") no-repeat;
+    position: absolute;
+    left: -22px;
+    top: -12px;
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+}
+
+.eror-message {
+    font-size:20px;
+    margin-bottom:30px;
+    color :#160B38;
+}
+
+.eror-message p {
+    line-height: 30px;
+}
+
+.banner {
+    width:50%;
+}
+
+.banner-image {
+    width:100%;
+}
+
+.link-to-home a{
+    font-family: "Jost-Medium";
+    background-color: #8054F6;
+    color: #fff;    padding:7px 20px;
+    box-sizing: border-box;
+    border-radius:13px 13px 0px 13px;
+    font-size:16px;
+    display:block; 
+    width:160px;   
+    text-decoration: none;
+    text-align: center;
+    padding:15px;
+}
+
+@media screen and (max-width:1200px){
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width:992px){
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .container {
+        max-width: 540px;
+    }
+
+    .nav__icon{
+        display: block!important;
+        transition: left 0.5s ease-in-out;
+    }
+ 
+    .menu {
+        display: none;
+        position: fixed;
+        display: flex;
+        background-color: rgb(255, 251, 251);
+        flex-direction: column;
+        top:0px;
+        height:100%;
+        box-shadow:-2px 0px 3.5px -0.5px black;
+        left:-450px;
+        padding:10px;
+        width:40%;
+        border-radius: 2px;
+        z-index: 100;
+        transition: left 0.5s ease-in-out;
+    }
+    
+    .link_menu {
+        margin-bottom: 20px;
+        margin-top:20px;
+        font-size:15px;
+    }
+    
+    .link_menu_active a{
+        font-family: "Jost-Medium";
+        box-sizing: border-box;
+        border-radius: 7px 7px 0px 7px !important;
+        font-size: 16px!important;
+        padding: 7px 20px!important; 
+       }
+    
+       .display-eror {
+           order:1;
+           width:100%;
+       }
+
+       .banner {
+           order:0;
+           width:100%;
+           text-align: center;
+       }
+
+       .banner-image {
+           max-width:430px;
+       }
+
+       .container {
+           padding:20px;
+       }
+}
+
+@media screen and (max-width:640px) {
+
+    .menu{
+        padding:0px;
+        align-content: center;
+    }
+    .menu__link {
+        font-size:15px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .link_menu_active{
+        padding:0px;
+        font-size:18px;    
+    }
+    .title-eror {
+        font-size:50px;
+    }
+    .eror-message {
+        font-size:25px;
+    }
+    .container {
+        max-width: 100%;
+    }
+
+    .main-row {
+        margin-top:-10px;
+    }
+
+}
+
+@media screen and (max-width:576px){
+    .container {
+        max-width: 100%;
+    }
+
+    .eror-message{
+        font-size:20px;
+    }
+
+    .menu{
+        width:50%;
+        padding:5px;
+    }
+
+    .menu__link {
+        font-size:18px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .eror-message {
+        font-size:17px;
+    }
+
+    .menu{
+        width:50%;
+        padding:5px;
+    }
+}
